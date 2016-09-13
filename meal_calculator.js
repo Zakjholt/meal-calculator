@@ -1,10 +1,10 @@
 var Diner = {
     name: "",
     dishes: {},
-    total: function(dishes) {
+    total: function() {
         var total = 0;
-        for (var i in dishes) {
-            total += dishes[i];
+        for (var i in this.dishes) {
+            total += this.dishes[i];
         }
         return total;
     },
@@ -78,10 +78,8 @@ newBill.diners.push(diner1);
 newBill.diners.push(diner2);
 newBill.diners.push(diner3);
 
-newBill.totalDiners(newBill.diners, 6);
+newBill.totalDiners(newBill.diners, 7);
 
 newBill.totalTips(newBill.diners, 6, 20);
 
 newBill.individualBill(newBill.diners, 6, 20);
-
-console.log(newBill);
